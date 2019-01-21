@@ -7,8 +7,8 @@ numberOfQuestion -= 1;
 console.log(numberOfQuestion  + " more questions");
 
 let userActionChoice = readLineSync.question("Enter a conjugated verb to start the action of your pretty story: ");
-numberOfQuestion -= 1;
-console.log(numberOfQuestion + " more question");
+
+console.log((numberOfQuestion -= 1) + " more question");
 
 let userComplementChoice = readLineSync.question("Enter a complement to bring your pretty story to life: ");
 
