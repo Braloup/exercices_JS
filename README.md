@@ -1,5 +1,112 @@
-# exercices_JS
-Becode JavaScript Courses
+# Algorithmics with JavaScript 01 - Introduction
+JavaScript is a powerful programming language designed to add interactivity to web pages, thus improving the user experience. It is present in all web browsers. Nowadays it is also used more and more on servers due to its many advantages.
+
+Due to its simplicity it is a good tool to learn algorithmics. Trainees will also have the added benefit of knowing a widely available programming language at the end of this course.
+
+You should not confuse Java and JavaScript. They are completely different programming languages. Take a look here if you want to understand why they have so similar names.
+
+Install Node.js
+If you read this it means you probably already have a program on your computer that allows you to execute JavaScript: your web browser. It can be Chrome, Firefox (or, if you are unlucky, Edge, Internet Explorer or Safari). They all contain a JavaScript interpreter.
+
+But here we will not use any of those. We will use an implementation of JavaScript which is more appropriate to learn its fundamentals: Node.js.
+
+So don't wait and install it! On Ubuntu here are the steps you must follow:
+
+sudo apt-get update
+sudo apt-get install nodejs npm
+Then create a folder in you home folder named js:
+
+mkdir js
+cd js
+Execute the following command to install some more tools that we will need for this lesson:
+
+npm install readline-sync
+Create a file named test.js in the js folder and copy-paste the following content in it:
+
+console.log("It works !!!");
+Finally type the following command:
+
+node test.js
+If it displays It works !!! it means everything went fine.
+
+You can also test the interactive mode of Node.js by simply typing:
+
+node
+It's useful to quickly test some pieces of code!
+
+Bases
+Display some data
+We've already seen this:
+
+console.log("hello");
+console.log() is often used to debug your code or to display small message. Use it and abuse it in all the exercices to understand what happens in your programs.
+
+Ask data to the user
+Type one and only one time this line of code at the top of your file to import the little library we installed earlier:
+
+const readlineSync = require("readline-sync");
+Then you can do this:
+
+let userName = readlineSync.question('Can you give me your name please?');
+console.log("Hello " + userName);
+It's not frequently used in real-life programs but it will be useful for simple exercises.
+
+Variables
+let age = 25;
+A variable is... well, it's a thing that holds stuffs. The let keyword allows us to define a new variable. Then we can assign what we want to it using the = operator.
+
+let age = 25; // I'm 25
+age = 36; // I get older
+age = 18; // Miraculously I'm getting younger
+Types of variables
+Numbers:
+
+let age = 25;
+String:
+
+let phrase = "Coding is fun!";
+Booleans:
+
+let isItTrue = true;
+let isItFalse = false;
+Numbers
+let age = 23;
+
+let sisterAge = age + 11;
+
+age += 12; // age = age + 12;
+
+console.log(age);
+Arithmetic operators
+Addition: +
+Soustraction: -
+Multiplication: *
+Division: /
+Modulo: %
+Strings
+let name = "Jean";
+let nameSister = "Emma";
+console.log("My name is " + name);
+
+let userName = readlineSync.question("What's your name?");
+console.log("He's called " + userName);
+parseInt()
+let htmlBadges = readlineSync.question('How many HTML badges do you have?');
+
+let cssBadges = readlineSync.question('How many CSS badges do you have?');
+
+let totalBadges = parseInt(htmlBadges) + parseInt(cssBadges);
+
+console.log('Woaw, you have ' + totalBadges + "!");
+parseInt() converts a string to a number.
+
+Beware of variable types !
+console.log('10' + '5'); // '105' => string type
+
+console.log(10 + 5); // 15 => number type
+Exercises
+Github
+Create one file per exercise and puts all your exercises in a single repository on Github. If you don't do it this way it could be a hell of a mess in Becode's account on Github.
 
 Exercise 1.1
 Define a variable and display it in the console.
@@ -19,7 +126,7 @@ Ask two numbers with decimal part to the user. For the first one only keep the i
 You will have to perform a search on Google to know how to only keep the integer part of a number.
 
 Exercise 1.6
-Like the previous exercice but this time divide them and display the rest of the integer division of the two numbers.
+Ask two integers to the user. Display the rest of the integer division of the two numbers.
 
 Exercice 1.7
 Ask to the user its shoe size and its birth year. Then make the following calculation:
@@ -37,3 +144,4 @@ Create a "Story Teller".
 Ask questions to the user about different things. Store the results he gives to you. Display them in a way that it creates a fun story!
 
 Bonus: when you ask questions to the user he should be able to see how many questions remain to be asked.
+
